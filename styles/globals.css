@@ -14,3 +14,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.bg-pink {
+  background-color: blanchedalmond;
+}
+
+@media (min-width: 769px) {
+  .ph-5-lg {
+    margin-left: 4rem;
+  }
+}
