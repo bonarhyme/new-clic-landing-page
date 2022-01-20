@@ -1,6 +1,7 @@
 import logo from "../images/logo.png";
 import feed from "../images/feed.png";
 import leaf from "../images/leaf.png";
+import supporters from "../images/supporters.PNG";
 import image1 from "../images/space1.jpg";
 import image2 from "../images/space2.jpg";
 import image3 from "../images/space3.jpg";
@@ -15,6 +16,7 @@ export const appData = {
   logo: logo,
   feed,
   leaf,
+  supporters,
   companyName: "Lorem ipSum",
   image1,
   image2,

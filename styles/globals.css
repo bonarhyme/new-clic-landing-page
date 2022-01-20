@@ -25,17 +25,6 @@ a {
   }
 }
 
-.align {
-  display: flex;
-  width: 100%;
-  max-width: 500px;
-  border: 1px solid rgba(128, 128, 128, 0.089);
-}
-form {
-  border: 1px solid gray;
-  width: max-content;
-}
-
 input {
   flex: 3;
   padding: 0.5rem 1rem;
@@ -47,6 +36,11 @@ button[type="submit"] {
   border: 1px solid green;
   background-color: green;
   color: white;
+}
+@media (max-width: 480px) {
+  button[type="submit"] {
+    width: 100%;
+  }
 }
 .leaf-feed-container {
   display: flex;

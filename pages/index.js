@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import ClikNav from "./components/ClikNav";
 import Header from "./components/Header";
+import Supporters from "./components/Supporters";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
           <ClikNav />
           <Header />
         </div>
+        <Supporters />
       </main>
     </div>
   );
