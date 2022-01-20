@@ -1,4 +1,6 @@
 import logo from "../images/logo.png";
+import feed from "../images/feed.png";
+import leaf from "../images/leaf.png";
 import image1 from "../images/space1.jpg";
 import image2 from "../images/space2.jpg";
 import image3 from "../images/space3.jpg";
@@ -11,6 +13,8 @@ import wedo3 from "../images/wedo3.jpg";
 
 export const appData = {
   logo: logo,
+  feed,
+  leaf,
   companyName: "Lorem ipSum",
   image1,
   image2,

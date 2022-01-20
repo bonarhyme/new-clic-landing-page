@@ -16,11 +16,65 @@ a {
 }
 
 .bg-pink {
-  background-color: blanchedalmond;
+  background-color: rgb(250, 242, 228);
 }
 
 @media (min-width: 769px) {
   .ph-5-lg {
     margin-left: 4rem;
   }
+}
+
+.align {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid rgba(128, 128, 128, 0.089);
+}
+form {
+  border: 1px solid gray;
+  width: max-content;
+}
+
+input {
+  flex: 3;
+  padding: 0.5rem 1rem;
+  border: none;
+}
+button[type="submit"] {
+  flex: 2;
+  padding: 0.5rem 1rem;
+  border: 1px solid green;
+  background-color: green;
+  color: white;
+}
+.leaf-feed-container {
+  display: flex;
+}
+
+.feed {
+  /* transform: rotateX(30deg); */
+  /* transform-origin: 100%; */
+  /* transform: rotateX(60deg) rotateZ(29deg) rotateY(0deg); */
+  /* transform-style: preserve-3d; */
+  /* transform-origin: 0 0 0;
+  perspective: 900px; */
+  /* transform: rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);
+
+  transform-style: preserve-3d; */
+}
+.feed-image {
+  /* clip: rect(0em, 18.5em, 23.1em, 0em); */
+}
+
+.leaf {
+  padding-top: 3rem;
+}
+
+.clik {
+  font-size: 4rem;
+}
+
+.clik + p {
+  font-size: 1.5rem;
 }
