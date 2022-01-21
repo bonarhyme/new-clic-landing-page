@@ -2,7 +2,8 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
 import { BsFillPeopleFill, BsQuestionLg } from "react-icons/bs";
-import { FcIdea } from "React-icons/fc";
+
+import { HiLightBulb } from "react-icons/hi";
 
 import MyCard from "./MyCard";
 
@@ -13,7 +14,7 @@ const GetInTouch = () => {
       <Row className="justify-content-center align-items-center">
         <Col md={4}>
           <MyCard
-            Logo={FcIdea}
+            Logo={HiLightBulb}
             email="georgia.young@example.com"
             text="Get Support"
             linkText="Give your suggestions"
