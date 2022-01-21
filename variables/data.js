@@ -12,11 +12,16 @@ import wedo1 from "../images/wedo1.jpg";
 import wedo2 from "../images/wedo2.jpg";
 import wedo3 from "../images/wedo3.jpg";
 
+import target from "../images/target.png";
+import influence from "../images/influence.png";
+
 export const appData = {
   logo: logo,
   feed,
   leaf,
   supporters,
+  target,
+  influence,
   companyName: "Lorem ipSum",
   image1,
   image2,

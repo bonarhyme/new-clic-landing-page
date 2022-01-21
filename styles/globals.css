@@ -18,6 +18,9 @@ a {
 .bg-pink {
   background-color: rgb(250, 242, 228);
 }
+.bg-wh {
+  background-color: rgb(245, 245, 245);
+}
 
 @media (min-width: 769px) {
   .ph-5-lg {
@@ -46,20 +49,20 @@ button[type="submit"] {
   display: flex;
 }
 
-.feed {
-  /* transform: rotateX(30deg); */
-  /* transform-origin: 100%; */
-  /* transform: rotateX(60deg) rotateZ(29deg) rotateY(0deg); */
-  /* transform-style: preserve-3d; */
-  /* transform-origin: 0 0 0;
+/* .feed { */
+/* transform: rotateX(30deg); */
+/* transform-origin: 100%; */
+/* transform: rotateX(60deg) rotateZ(29deg) rotateY(0deg); */
+/* transform-style: preserve-3d; */
+/* transform-origin: 0 0 0;
   perspective: 900px; */
-  /* transform: rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);
+/* transform: rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);
 
   transform-style: preserve-3d; */
-}
-.feed-image {
-  /* clip: rect(0em, 18.5em, 23.1em, 0em); */
-}
+/* } */
+/* .feed-image { */
+/* clip: rect(0em, 18.5em, 23.1em, 0em); */
+/* } */
 
 .leaf {
   padding-top: 3rem;
@@ -71,4 +74,58 @@ button[type="submit"] {
 
 .clik + p {
   font-size: 1.5rem;
+}
+
+.green {
+  background-color: green;
+}
+
+.why p {
+  color: gray;
+}
+
+.my-card {
+  height: 450px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin: auto;
+}
+
+.card-a,
+.card-btn {
+  color: white;
+  padding: 0.4rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.card-btn {
+  background-color: green;
+}
+
+.card-a {
+  border: 2px solid white;
+  font-size: 1.2rem;
+}
+
+.card-a:hover,
+.card-btn:hover {
+  color: white;
+  transform: scale(1.05);
+}
+
+.white {
+  color: white;
+}
+
+.supporters {
+  border: 1px solid red;
+  background-color: red;
+}
+
+.big {
+  height: 500px;
 }

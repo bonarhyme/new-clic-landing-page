@@ -5,9 +5,9 @@ import { appData } from "../../variables/data";
 
 const Supporters = () => {
   return (
-    <article>
-      <Container>
-        <h2 className="text-center pt-5">Our Supporters</h2>
+    <article className="bg-wh">
+      <Container className="bg-wh">
+        <h2 className="text-center pt-5 ">Our Supporters</h2>
         <Image
           src={appData.supporters}
           width={1170}
