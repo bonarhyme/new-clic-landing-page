@@ -3,6 +3,7 @@ import Image from "next/image";
 import { SSRProvider } from "react-bootstrap";
 import ClikNav from "./components/ClikNav";
 import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
 import GetInTouch from "./components/GetInTouch";
 import Header from "./components/Header";
 import LetsDo from "./components/LetsDo";
@@ -29,6 +30,7 @@ export default function Home() {
           <GetInTouch />
           <LetsDo />
           <FAQ />
+          <Footer />
         </main>
       </div>
     </SSRProvider>

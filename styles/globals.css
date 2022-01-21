@@ -150,3 +150,25 @@ button[type="submit"] {
 .big {
   height: 500px;
 }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: green;
+  color: white;
+  padding: 0.8rem 2rem;
+}
+
+footer div {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+footer div:first-of-type {
+  font-size: 0.8rem;
+}
+
+footer div > * {
+  margin-right: 0.5rem;
+}
