@@ -5,8 +5,6 @@ import { BsFillPeopleFill, BsQuestionLg } from "react-icons/bs";
 
 import { HiLightBulb } from "react-icons/hi";
 
-import MyCard from "./MyCard";
-
 const GetInTouch = () => {
   return (
     <Container className="py-5">
@@ -25,13 +23,6 @@ const GetInTouch = () => {
           </article>
         </Col>
         <Col md={4}>
-          {/* <MyCard
-            Logo={BsFillPeopleFill}
-            email="georgia.young@example.com"
-            linkText="Join The Team"
-            link="/"
-            big
-          /> */}
           <article className="my-card green big">
             <BsFillPeopleFill size={75} color="white" />
             <address className="white">georgia.young@example.com</address>
