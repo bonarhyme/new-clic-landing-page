@@ -4,6 +4,7 @@ import { SSRProvider } from "react-bootstrap";
 import ClikNav from "./components/ClikNav";
 import GetInTouch from "./components/GetInTouch";
 import Header from "./components/Header";
+import LetsDo from "./components/LetsDo";
 import Supporters from "./components/Supporters";
 import Why from "./components/Why";
 
@@ -22,12 +23,10 @@ export default function Home() {
             <ClikNav />
             <Header />
           </div>
-
           <Supporters />
-
           <Why />
-
           <GetInTouch />
+          <LetsDo />
         </main>
       </div>
     </SSRProvider>

@@ -27,6 +27,27 @@ a {
     margin-left: 4rem;
   }
 }
+.lets-do form {
+  border: 1px solid rgb(199, 199, 199);
+  width: fit-content;
+}
+.lets-do {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+h2 {
+  font-size: 2.5rem !important;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.144);
+}
+.remove-padding {
+  margin-top: -1rem;
+}
 
 input {
   flex: 3;
