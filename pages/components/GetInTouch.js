@@ -13,33 +13,47 @@ const GetInTouch = () => {
       <h2 className="text-center">Get In Touch</h2>
       <Row className="justify-content-center align-items-center">
         <Col md={4}>
-          <MyCard
-            Logo={HiLightBulb}
-            email="georgia.young@example.com"
-            text="Get Support"
-            linkText="Give your suggestions"
-            link="/"
-            btn
-          />
+          <article className="my-card bg-pink">
+            <HiLightBulb size={75} color="black" />
+            <address>georgia.young@example.com</address>
+            <p>
+              <b>Get Support</b>
+            </p>
+            <a href="#" className="card-btn">
+              Give your suggestions
+            </a>
+          </article>
         </Col>
         <Col md={4}>
-          <MyCard
+          {/* <MyCard
             Logo={BsFillPeopleFill}
             email="georgia.young@example.com"
             linkText="Join The Team"
             link="/"
             big
-          />
+          /> */}
+          <article className="my-card green big">
+            <BsFillPeopleFill size={75} color="white" />
+            <address className="white">georgia.young@example.com</address>
+            <p>
+              <b className="white">Get Support</b>
+            </p>
+            <a href="#" className="card-a">
+              Join The Team
+            </a>
+          </article>
         </Col>
         <Col md={4}>
-          <MyCard
-            Logo={BsQuestionLg}
-            email="georgia.young@example.com"
-            linkText="Ask a question"
-            text="Get Support"
-            link="/"
-            btn
-          />
+          <article className="my-card bg-pink">
+            <HiLightBulb size={75} color="black" />
+            <address>georgia.young@example.com</address>
+            <p>
+              <b>Get Support</b>
+            </p>
+            <a href="#" className="card-btn">
+              Ask a question
+            </a>
+          </article>
         </Col>
       </Row>
     </Container>
