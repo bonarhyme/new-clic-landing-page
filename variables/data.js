@@ -14,4 +14,6 @@ export const appData = {
   target,
   influence,
   companyName: "Lorem ipSum",
+  url: "https://clik.com",
+  twitter: "@clik",
 };
