@@ -1,12 +1,13 @@
 import Head from "next/head";
-import Image from "next/image";
+
 import { SSRProvider } from "react-bootstrap";
 import { appData } from "../variables/data";
-import ClikNav from "./components/ClikNav";
+
 import FAQ from "./components/FAQ";
-import Footer from "./components/Footer";
+
 import GetInTouch from "./components/GetInTouch";
 import Header from "./components/Header";
+
 import LetsDo from "./components/LetsDo";
 import Supporters from "./components/Supporters";
 import Why from "./components/Why";
@@ -49,7 +50,6 @@ export default function Home() {
 
         <main>
           <div className="bg-pink">
-            <ClikNav />
             <Header />
           </div>
           <Supporters />
@@ -57,7 +57,6 @@ export default function Home() {
           <GetInTouch />
           <LetsDo />
           <FAQ />
-          <Footer />
         </main>
       </div>
     </SSRProvider>
