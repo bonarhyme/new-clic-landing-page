@@ -1,5 +1,6 @@
 import React from "react";
 import { Form } from "react-bootstrap";
+import OurForm from "./OurForm";
 
 const LetsDo = () => {
   return (
@@ -10,15 +11,7 @@ const LetsDo = () => {
         We need you to help us test the beta version before launch
       </p>
       <div>
-        <form>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Your Email"
-          />
-          <button type="submit">Join Wait List</button>
-        </form>
+        <OurForm />
         <Form.Text className="text-muted">
           Clik &quot;Join Beta&quot; if you would like to Beta Test Clik
         </Form.Text>

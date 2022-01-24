@@ -5,11 +5,13 @@ import { appData } from "../../variables/data";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import OurForm from "./OurForm";
 
 const Header = () => {
   useEffect(() => {
     AOS.init({ duration: 1500 });
   }, []);
+
   return (
     <header>
       <Container className="p-5">
@@ -20,15 +22,7 @@ const Header = () => {
                 <strong>Clik</strong>
               </h1>
               <p>Be part of your local community</p>
-              <form>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Email Address"
-                />
-                <button type="submit">Join Wait List</button>
-              </form>
+              <OurForm />
               <Form.Text className="text-muted">
                 Clik will soon be available, join wait list to stay informed
               </Form.Text>

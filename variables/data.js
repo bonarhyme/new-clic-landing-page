@@ -16,4 +16,5 @@ export const appData = {
   companyName: "Lorem ipSum",
   url: "https://clik.com",
   twitter: "@clik",
+  formUrl: "https://clik.com",
 };
