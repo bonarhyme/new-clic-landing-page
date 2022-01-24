@@ -3,7 +3,7 @@ import { Accordion, Container } from "react-bootstrap";
 
 const FAQ = () => {
   return (
-    <article className="faq py-5">
+    <article className="faq py-5" id="faq">
       <Container>
         <h2 className="text-center">FAQs</h2>
         <Accordion defaultActiveKey="0" flush className="py-3">

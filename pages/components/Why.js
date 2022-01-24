@@ -12,7 +12,7 @@ const Why = () => {
     AOS.init({ duration: 1500 });
   }, []);
   return (
-    <article className="bg-wh">
+    <article className="bg-wh" id="why">
       <Container className="py-3  text-center">
         <h2 className="py-5">Why Clik?</h2>
         <Row className="justify-content-center  why">

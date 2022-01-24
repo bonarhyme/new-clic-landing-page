@@ -26,6 +26,8 @@ a {
 @media (min-width: 769px) {
   .ph-5-lg {
     margin-left: 4rem;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -45,6 +47,11 @@ h2 {
 }
 .remove-padding {
   margin-top: -1rem;
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
 input {

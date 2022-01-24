@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
@@ -22,10 +23,20 @@ const ClikNav = () => {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto ph-5-lg">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Why?</Nav.Link>
-            <Nav.Link href="#link">Product</Nav.Link>
-            <Nav.Link href="#link">Contact</Nav.Link>
+            <Nav.Link>
+              <Link href="/">Home</Link>
+            </Nav.Link>
+
+            <Nav.Link>
+              <Link href="#why">Why?</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link href="#faq">Product</Link>
+            </Nav.Link>
+
+            <Nav.Link>
+              <Link href="#contact">Contact</Link>
+            </Nav.Link>
           </Nav>
           <Nav>
             <NavDropdown title="Language" id="basic-nav-dropdown">
