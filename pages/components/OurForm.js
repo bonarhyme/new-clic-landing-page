@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Alert } from "react-bootstrap";
+import { Alert, Button } from "react-bootstrap";
 import { appData } from "../../variables/data";
 
 const OurForm = () => {
@@ -54,7 +54,14 @@ const OurForm = () => {
           placeholder="Email Address"
           required
         />
-        <button type="submit">Join Wait List</button>
+
+        <button type="submit" className="hide-xs">
+          Join Wait List
+        </button>
+
+        <Button type="submit" className="hide-md">
+          Join Wait List
+        </Button>
       </form>
     </div>
   );
