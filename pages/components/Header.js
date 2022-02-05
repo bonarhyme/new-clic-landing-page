@@ -34,16 +34,6 @@ const Header = () => {
           </Col>
           <Col md={6} xs={12}>
             <div data-aos="fade-left">
-              <div className="leaf-feed-container">
-                <div className="leaf">
-                  <Image
-                    src={appData.leaf}
-                    width={70}
-                    height={70}
-                    objectFit="contain"
-                    alt=""
-                  />
-                </div>
                 <div className="feed">
                   {/* <video src={appData.wedo}></video> */}
                   <video width={300} muted autoPlay controls>

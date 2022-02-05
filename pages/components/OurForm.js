@@ -56,11 +56,11 @@ const OurForm = () => {
         />
 
         <button type="submit" className="hide-xs">
-          Join Wait List
+          Join Beta List
         </button>
 
         <Button type="submit" className="hide-md">
-          Join Wait List
+          Join Beta List
         </Button>
       </form>
     </div>
