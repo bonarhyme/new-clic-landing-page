@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Button, Col, Container, Form, Offcanvas, Row } from "react-bootstrap";
+import {
+  Alert,
+  Button,
+  Col,
+  Container,
+  Form,
+  Offcanvas,
+  Row,
+} from "react-bootstrap";
 
 import { BsFillPeopleFill, BsQuestionLg } from "react-icons/bs";
 
@@ -8,14 +16,24 @@ import { HiLightBulb } from "react-icons/hi";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
+import axios from "axios";
 
 const GetInTouch = () => {
   const [show, setShow] = useState(false);
   const [email, setEmail] = useState("contact@clikplatform.nl");
   const [text, setText] = useState("");
+  const [success, setSuccess] = useState({ isExist: false, message: "" });
+  const [error, setError] = useState({ isExist: false, message: "" });
+  const [loading, setLoading] = useState(false);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setError({ isExist: false });
+    setSuccess({ isExist: false });
+    setShow(false);
+  };
   const handleShow = () => {
+    setError({ isExist: false });
+    setSuccess({ isExist: false });
     setShow(true);
   };
 
@@ -23,9 +41,31 @@ const GetInTouch = () => {
     AOS.init({ duration: 1500 });
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({ email, text });
+    setLoading(true);
+    try {
+      const { data } = await axios.post(
+        "/api/contact",
+        { email, text },
+        {
+          config: { "Content-Type": "application/json" },
+        }
+      );
+      setLoading(false);
+      setSuccess({ isExist: true, message: data.message });
+      setError({ isExist: false });
+    } catch (error) {
+      setLoading(false);
+      setSuccess({ isExist: false, message: "" });
+
+      const err =
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message;
+
+      setError({ isExist: true, message: err });
+    }
   };
 
   return (
@@ -79,6 +119,11 @@ const GetInTouch = () => {
             <Offcanvas.Title>Send us an Email</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
+            {loading && <Alert variant="info">Loading......</Alert>}
+            {error.isExist && <Alert variant="danger">{error.message}</Alert>}
+            {success.isExist && (
+              <Alert variant="success">{success.message}</Alert>
+            )}
             <Form
               style={{ width: "100%", maxWidth: "400px" }}
               onSubmit={handleSubmit}

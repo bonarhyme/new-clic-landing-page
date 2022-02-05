@@ -1,50 +1,47 @@
 import React, { useState } from "react";
 import { Alert, Button } from "react-bootstrap";
 import { appData } from "../../variables/data";
+import axios from "axios";
 
 const OurForm = () => {
   const [email, setEmail] = useState("");
-  const [success, setSuccess] = useState(false);
+  const [success, setSuccess] = useState({ isExist: false, message: "" });
   const [error, setError] = useState({ isExist: false, message: "" });
   const [loading, setLoading] = useState(false);
 
-  const handleForm = (e) => {
+  const handleForm = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setError({ ...error, isExist: false });
-    fetch(appData.formUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setLoading(false);
-        setSuccess(true);
-        console.log("Success:", data);
-      })
-      .catch((error) => {
-        setLoading(false);
-        setError({ ...error, isExist: true, message: error.message });
-        console.error("Error:", error);
-      });
+    try {
+      const { data } = await axios.post(
+        "/api/email",
+        { email },
+        {
+          config: { "Content-Type": "application/json" },
+        }
+      );
+      setLoading(false);
+      setSuccess({ isExist: true, message: data.message });
+      setError({ isExist: false });
+      setEmail("");
+    } catch (error) {
+      setLoading(false);
+      setSuccess({ isExist: false, message: "" });
+
+      const err =
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message;
+
+      setError({ isExist: true, message: err });
+    }
   };
 
   return (
     <div>
       {loading && <Alert variant="info">Loading......</Alert>}
-      {error.isExist && (
-        <Alert variant="danger">
-          An error occured. Failed to add you to the wait list.
-        </Alert>
-      )}
-      {success && (
-        <Alert variant="success">
-          Congratulations!!! You have been successfully added to the wait list{" "}
-        </Alert>
-      )}
+      {error.isExist && <Alert variant="danger">{error.message}</Alert>}
+      {success.isExist && <Alert variant="success">{success.message}</Alert>}
 
       <form onSubmit={handleForm} id="get-in-touch">
         <input
@@ -53,6 +50,9 @@ const OurForm = () => {
           id="email"
           placeholder="Email Address"
           required
+          onChange={(e) => setEmail(e.target.value)}
+          // autoComplete="false"
+          value={email}
         />
 
         <button type="submit" className="hide-xs">
