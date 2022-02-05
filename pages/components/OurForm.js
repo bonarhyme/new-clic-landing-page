@@ -46,7 +46,7 @@ const OurForm = () => {
         </Alert>
       )}
 
-      <form onSubmit={handleForm}>
+      <form onSubmit={handleForm} id="get-in-touch">
         <input
           type="email"
           name="email"

@@ -7,6 +7,7 @@ import { HiLightBulb } from "react-icons/hi";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 const GetInTouch = () => {
   const [show, setShow] = useState(false);
@@ -52,16 +53,9 @@ const GetInTouch = () => {
           <article className="my-card green big" data-aos="zoom-in">
             <BsFillPeopleFill size={75} color="white" />
             <address className="white"> joinus@clikplatform.nl</address>
-            <Button
-              variant="outline-success"
-              className="text-white card-a "
-              onClick={() => {
-                handleShow();
-                setEmail("joinus@clikplatform.nl");
-              }}
-            >
-              Join The Team
-            </Button>
+            <span className="text-white card-a ">
+              <Link href="#get-in-touch">Join The Team</Link>
+            </span>
           </article>
         </Col>
         <Col md={4}>

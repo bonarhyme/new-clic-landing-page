@@ -19,9 +19,13 @@ const Header = () => {
           <Col md={6} xs={12} className="my-5">
             <div data-aos="fade-right">
               <h1 className="clik">
-                <strong>Clik</strong>
+                <strong>Access your community in Clik</strong>
               </h1>
-              <p>Be part of your local community</p>
+              <p>
+                {" "}
+                Clik lets you benefit and contribute to your local community -
+                Stay connected!
+              </p>
               <OurForm />
               <Form.Text className="text-muted">
                 Clik will soon be available, join wait list to stay informed
