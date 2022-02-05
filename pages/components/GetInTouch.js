@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Button, Col, Container, Form, Offcanvas, Row } from "react-bootstrap";
 
 import { BsFillPeopleFill, BsQuestionLg } from "react-icons/bs";
 
@@ -9,9 +9,23 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const GetInTouch = () => {
+  const [show, setShow] = useState(false);
+  const [email, setEmail] = useState("contact@clikplatform.nl");
+  const [text, setText] = useState("");
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => {
+    setShow(true);
+  };
+
   useEffect(() => {
     AOS.init({ duration: 1500 });
   }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({ email, text });
+  };
 
   return (
     <Container className="py-5" id="contact">
@@ -20,39 +34,86 @@ const GetInTouch = () => {
         <Col md={4}>
           <article className="my-card bg-pink" data-aos="fade-right">
             <HiLightBulb size={75} color="black" />
-            <address>georgia.young@example.com</address>
-            <p>
-              <b>Get Support</b>
-            </p>
-            <a href="#" className="card-btn">
-              Give your suggestions
-            </a>
+            <address>support@clikplatform.nl</address>
+
+            <Button
+              className=" text-white"
+              variant="success"
+              onClick={() => {
+                handleShow();
+                setEmail("support@clikplatform.nl");
+              }}
+            >
+              Get Support
+            </Button>
           </article>
         </Col>
         <Col md={4}>
           <article className="my-card green big" data-aos="zoom-in">
             <BsFillPeopleFill size={75} color="white" />
-            <address className="white">georgia.young@example.com</address>
-            <p>
-              <b className="white">Get Support</b>
-            </p>
-            <a href="#" className="card-a">
+            <address className="white"> joinus@clikplatform.nl</address>
+            <Button
+              variant="outline-success"
+              className="text-white card-a "
+              onClick={() => {
+                handleShow();
+                setEmail("joinus@clikplatform.nl");
+              }}
+            >
               Join The Team
-            </a>
+            </Button>
           </article>
         </Col>
         <Col md={4}>
           <article className="my-card bg-pink" data-aos="fade-left">
             <HiLightBulb size={75} color="black" />
-            <address>georgia.young@example.com</address>
-            <p>
-              <b>Get Support</b>
-            </p>
-            <a href="#" className="card-btn">
+            <address>contact@clikplatform.nl</address>
+            <Button
+              variant="success"
+              className="text-white"
+              onClick={() => {
+                handleShow();
+                setEmail("contact@clikplatform.nl");
+              }}
+            >
               Ask a question
-            </a>
+            </Button>
           </article>
         </Col>
+        <Offcanvas show={show} onHide={handleClose}>
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Send us an Email</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Form
+              style={{ width: "100%", maxWidth: "400px" }}
+              onSubmit={handleSubmit}
+            >
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput1"
+              >
+                <Form.Label>Our Email</Form.Label>
+                <Form.Control type="email" value={email} disabled />
+              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label>Your message</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  onChange={(e) => setText(e.target.value)}
+                  placeholder="Enter your message"
+                />
+              </Form.Group>
+              <Button type="submit" variant="success">
+                Submit
+              </Button>
+            </Form>
+          </Offcanvas.Body>
+        </Offcanvas>
       </Row>
     </Container>
   );

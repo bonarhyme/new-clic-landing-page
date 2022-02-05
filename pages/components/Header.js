@@ -41,14 +41,10 @@ const Header = () => {
                   />
                 </div>
                 <div className="feed">
-                  <Image
-                    src={appData.feed}
-                    width={300}
-                    height={500}
-                    objectFit="contain"
-                    alt="Clik feed sample"
-                    className="feed-image"
-                  />
+                  {/* <video src={appData.wedo}></video> */}
+                  <video width={300} muted autoPlay controls>
+                    <source src="/wedo.mp4" type="video/mp4" />
+                  </video>
                 </div>
               </div>
             </div>

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 html,
 body {
   padding: 0;
@@ -5,6 +7,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   overflow-x: hidden;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 a {
@@ -139,7 +142,7 @@ button[type="submit"] {
 }
 
 .card-a {
-  border: 2px solid white;
+  border: 2px solid white !important;
   font-size: 1.2rem;
 }
 
@@ -194,4 +197,9 @@ footer div > * {
   .hide-md {
     display: none !important;
   }
+}
+
+video {
+  width: 100%;
+  max-width: 300px;
 }
