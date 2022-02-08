@@ -40,7 +40,6 @@ const Header = () => {
                     <source src="/Clik-Feed.mp4" type="video/mp4" />
                   </video>
                 </div>
-              </div>
             </div>
           </Col>
         </Row>
