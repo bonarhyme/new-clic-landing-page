@@ -3,7 +3,7 @@ import { Alert, Button } from "react-bootstrap";
 import { appData } from "../../variables/data";
 import axios from "axios";
 
-const OurForm = ({ wait = true }) => {
+const OurFormBeta = () => {
   const [email, setEmail] = useState("");
   const [success, setSuccess] = useState({ isExist: false, message: "" });
   const [error, setError] = useState({ isExist: false, message: "" });
@@ -12,17 +12,19 @@ const OurForm = ({ wait = true }) => {
   const handleForm = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setError({ isExist: false });
+    setSuccess({ isExist: false, message: "" });
     try {
       const { data } = await axios.post(
-        `${wait ? "/api/email" : "/api/beta"}`,
+        "/api/beta",
         { email },
         {
           config: { "Content-Type": "application/json" },
         }
       );
       setLoading(false);
-      setSuccess({ isExist: true, message: data.message });
       setError({ isExist: false });
+      setSuccess({ isExist: true, message: data.message });
       setEmail("");
     } catch (error) {
       setLoading(false);
@@ -56,15 +58,15 @@ const OurForm = ({ wait = true }) => {
         />
 
         <button type="submit" className="hide-xs">
-          {wait ? "Join Wait List" : "Join Beta List"}
+          Join Beta List
         </button>
 
         <Button type="submit" className="hide-md">
-          {wait ? "Join Wait List" : "Join Beta List"}
+          Join Beta List
         </Button>
       </form>
     </div>
   );
 };
 
-export default OurForm;
+export default OurFormBeta;

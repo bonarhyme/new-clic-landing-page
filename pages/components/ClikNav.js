@@ -13,8 +13,8 @@ const ClikNav = () => {
           <Image
             src={appData.logo}
             alt={`${appData.companyName} Logo`}
-            width={100}
-            height={50}
+            width={133}
+            height={81}
             objectFit="contain"
           />
         </Navbar.Brand>
@@ -23,19 +23,22 @@ const ClikNav = () => {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto ph-5-lg">
-            <span className="nav-link">
+            <span className="nav-link semi-bold">
               <Link href="/">Home</Link>
             </span>
 
-            <span className="nav-link">
-              <Link href="#why">Why?</Link>
+            <span className="nav-link semi-bold">
+              <Link href="#why">Why</Link>
             </span>
-            <span className="nav-link">
-              <Link href="#faq">Product</Link>
+            <span className="nav-link semi-bold">
+              <Link href="#get-in-touch">Beta</Link>
             </span>
 
-            <span className="nav-link">
+            <span className="nav-link semi-bold">
               <Link href="#contact">Contact</Link>
+            </span>
+            <span className="nav-link semi-bold">
+              <Link href="#faq">FAQ</Link>
             </span>
           </Nav>
           <Nav>

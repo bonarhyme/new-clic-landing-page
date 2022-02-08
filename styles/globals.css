@@ -58,19 +58,24 @@ a {
 }
 form {
   padding: 1rem;
+  width: 100%;
+  /* max-width: 514px; */
+  /* height: 58px; */
 }
 input {
   flex: 3;
   padding: 0.5rem 1rem;
   border: none;
   background-color: rgb(230, 230, 230);
+  /* height: 58px; */
 }
 button[type="submit"] {
   flex: 2;
   padding: 0.5rem 1rem;
-  border: 1px solid #2DC071;
-  background-color: #2DC071;
+  border: 1px solid #2dc071;
+  background-color: #2dc071;
   color: white;
+  /* height: 58px; */
 }
 @media (max-width: 480px) {
   input {
@@ -109,7 +114,7 @@ button[type="submit"] {
 }
 
 .green {
-  background-color: #2DC071;
+  background-color: #2dc071;
 }
 
 .why p {
@@ -135,7 +140,7 @@ button[type="submit"] {
   border-radius: 5px;
 }
 .card-btn {
-  background-color: #2DC071;
+  background-color: #2dc071;
 }
 
 .card-a {
@@ -166,7 +171,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2DC071;
+  background-color: #2dc071;
   color: white;
   padding: 0.8rem 2rem;
 }
@@ -199,4 +204,20 @@ footer div > * {
 video {
   width: 100%;
   max-width: 300px;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+.bolder {
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .semi-bold {
+    font-weight: 500;
+  }
+  .bolder {
+    font-weight: 600;
+  }
 }

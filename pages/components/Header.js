@@ -41,7 +41,6 @@ const Header = () => {
                   </video>
                 </div>
               </div>
-            </div>
           </Col>
         </Row>
       </Container>
