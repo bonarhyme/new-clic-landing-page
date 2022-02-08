@@ -32,7 +32,7 @@ const Why = () => {
           </Col>
           <Col xs={12} md={4} className="py-3">
             <div data-aos="zoom-in">
-              <MdLibraryAddCheck size={64} color="green" />
+				<Image src={appData.allInOne} width={64} height={64} alt="" />
             </div>
             <h4>All in one</h4>
             <p>

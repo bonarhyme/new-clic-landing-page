@@ -78,7 +78,7 @@ const GetInTouch = () => {
             <address>support@clikplatform.nl</address>
 
             <Button
-              className=" text-white"
+              className="text-white card-btn"
               variant="success"
               onClick={() => {
                 handleShow();
@@ -104,7 +104,7 @@ const GetInTouch = () => {
             <address>contact@clikplatform.nl</address>
             <Button
               variant="success"
-              className="text-white"
+              className="text-white card-btn"
               onClick={() => {
                 handleShow();
                 setEmail("contact@clikplatform.nl");
