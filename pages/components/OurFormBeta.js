@@ -45,7 +45,7 @@ const OurFormBeta = () => {
       {error.isExist && <Alert variant="danger">{error.message}</Alert>}
       {success.isExist && <Alert variant="success">{success.message}</Alert>}
 
-      <form onSubmit={handleForm} id="get-in-touch">
+      <form onSubmit={handleForm} id="beta">
         <input
           type="email"
           name="email"

@@ -30,13 +30,16 @@ const ClikNav = () => {
             <span className="nav-link semi-bold">
               <Link href="#why">Why</Link>
             </span>
-            <span className="nav-link semi-bold">
-              <Link href="#get-in-touch">Beta</Link>
-            </span>
 
             <span className="nav-link semi-bold">
               <Link href="#contact">Contact</Link>
             </span>
+			
+			<span className="nav-link semi-bold">
+              <Link href="#beta">Beta</Link>
+            </span>
+
+			
             <span className="nav-link semi-bold">
               <Link href="#faq">FAQ</Link>
             </span>
