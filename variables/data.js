@@ -5,6 +5,7 @@ import supporters from "../public/supporters.PNG";
 
 import target from "../public/target.png";
 import influence from "../public/influence.png";
+import allInOne from "../public/AllInOne.png";
 
 export const appData = {
   logo: logo,
@@ -13,6 +14,7 @@ export const appData = {
   supporters,
   target,
   influence,
+  allInOne,
   companyName: "Lorem ipSum",
   url: "https://clik.com",
   twitter: "@clik",
