@@ -34,12 +34,11 @@ const Header = () => {
           </Col>
           <Col md={6} xs={12}>
             <div data-aos="fade-left">
-                <div className="feed">
-                  {/* <video src={appData.wedo}></video> */}
-                  <video width={300} muted autoPlay controls>
-                    <source src="/wedo.mp4" type="video/mp4" />
-                  </video>
-                </div>
+              <div className="feed">
+                {/* <video src={appData.wedo}></video> */}
+                <video width={300} muted autoPlay loop>
+                  <source src="/wedo.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
           </Col>
