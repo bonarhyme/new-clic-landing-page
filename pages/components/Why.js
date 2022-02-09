@@ -14,7 +14,7 @@ const Why = () => {
   return (
     <article className="bg-wh" id="why">
       <Container className="py-3  text-center">
-        <h2 className="py-5">Why Clik?</h2>
+        <h2 className="py-5 bolder">Why Clik?</h2>
         <Row className="justify-content-center  why">
           <Col xs={12} md={4} className="py-3">
             <div data-aos="fade-right">

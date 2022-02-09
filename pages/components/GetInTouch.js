@@ -70,7 +70,7 @@ const GetInTouch = () => {
 
   return (
     <Container className="py-5" id="contact">
-      <h2 className="text-center">Get In Touch</h2>
+      <h2 className="text-center bolder">Get In Touch</h2>
       <Row className="justify-content-center align-items-center">
         <Col md={4}>
           <article className="my-card bg-pink" data-aos="fade-right">
