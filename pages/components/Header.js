@@ -30,21 +30,23 @@ const Header = () => {
               <Form.Text className="text-muted">
                 Clik will soon be available, join wait list to stay informed
               </Form.Text>
-			  <strong className="grey">
-				<em>
-					Share Clik with family and friends, so they can join the wait list too!!
-				</em>
+              <br />
+              <strong className="grey">
+                <em>
+                  Share Clik with family and friends, so they can join the wait
+                  list too!!
+                </em>
               </strong>
             </div>
           </Col>
           <Col md={6} xs={12}>
             <div data-aos="fade-left">
-                <div className="feed" style="margin-left: 25%">
-                  {/* <video src={appData.Clik-Feeda}></video> */}
-                  <video width={300} muted autoPlay loop>
-                    <source src="/Clik-Feed.mp4" type="video/mp4" />
-                  </video>
-                </div>
+              <div className="feed" style={{ marginLeft: "25%" }}>
+                {/* <video src={appData.Clik-Feeda}></video> */}
+                <video width={300} muted autoPlay loop>
+                  <source src="/Clik-Feed.mp4" type="video/mp4" />
+                </video>
+              </div>
             </div>
           </Col>
         </Row>
