@@ -3,26 +3,17 @@ import nodemailer from "nodemailer";
 export default async function handler(req, res) {
   const { email, text } = req.body;
 
-  let password;
-
-  if (email == "support@clikplatform.nl") {
-    password = process.env.SUPPORT_PASSWORD;
-  } else {
-    password = process.env.CONTACT_PASSWORD;
-  }
-
   const transporter = nodemailer.createTransport({
-    service: "Hotmail",
+    service: "Godaddy",
 
     auth: {
       user: "info@clikplatform.nl",
-      pass: password,
+      pass: process.env.SUPPORT_PASSWORD,
     },
-    secure: true,
   });
   const mailData = {
     from: email,
-    to: "bonarhyme@gmail.com",
+    to: email,
     subject: email.split("@")[0],
     text,
   };
