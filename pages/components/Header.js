@@ -2,6 +2,17 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
 import { appData } from "../../variables/data";
+import {
+  FacebookShareButton,
+  InstapaperShareButton,
+  LinkedinShareButton,
+  TelegramShareButton,
+  TumblrShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+} from "react-share";
+
+import { FacebookIcon } from "react-share";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -37,6 +48,15 @@ const Header = () => {
                   list too!!
                 </em>
               </strong>
+              <br />
+              <FacebookShareButton
+                quote="Clik lets you benefit and contribute to your local community -
+                Stay connected!"
+                hashtag="#JoinClik"
+                url={appData.url}
+              >
+                <FacebookIcon size={40} round={true} />
+              </FacebookShareButton>
             </div>
           </Col>
           <Col md={6} xs={12}>

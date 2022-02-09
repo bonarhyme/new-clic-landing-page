@@ -16,8 +16,8 @@ export const appData = {
   influence,
   allInOne,
   companyName: "Lorem ipSum",
-  url: "https://clik.com",
+  url: "clikplatform.nl",
   twitter: "@clik",
-  formUrl: "https://clik.com",
+  formUrl: "clikplatform.nl",
   serverUrl: process.env.SERVER_URL,
 };
