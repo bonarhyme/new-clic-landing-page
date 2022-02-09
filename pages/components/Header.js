@@ -7,12 +7,18 @@ import {
   InstapaperShareButton,
   LinkedinShareButton,
   TelegramShareButton,
-  TumblrShareButton,
   TwitterShareButton,
   WhatsappShareButton,
 } from "react-share";
 
-import { FacebookIcon } from "react-share";
+import {
+  FacebookIcon,
+  InstapaperIcon,
+  LinkedinIcon,
+  TelegramIcon,
+  TwitterIcon,
+  WhatsappIcon,
+} from "react-share";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -49,14 +55,29 @@ const Header = () => {
                 </em>
               </strong>
               <br />
-              <FacebookShareButton
-                quote="Clik lets you benefit and contribute to your local community -
-                Stay connected!"
-                hashtag="#JoinClik"
-                url={appData.url}
-              >
-                <FacebookIcon size={40} round={true} />
-              </FacebookShareButton>
+              <div className="share-buttons">
+                <FacebookShareButton
+                  quote={appData.quote}
+                  hashtag={appData.hashtag}
+                  url={appData.url}
+                >
+                  <FacebookIcon size={40} round={true} />
+                </FacebookShareButton>
+                <TwitterShareButton
+                  url={appData.url}
+                  title={appData.quote}
+                  hashtags={[appData.hashtag]}
+                  related={["@bonarhyme"]}
+                >
+                  <TwitterIcon size={40} round={true} />
+                </TwitterShareButton>
+                <WhatsappShareButton title={appData.quote} url={appData.url}>
+                  <WhatsappIcon size={40} round={true} />
+                </WhatsappShareButton>
+                <InstapaperShareButton title={appData.quote} url={appData.url}>
+                  <InstapaperIcon size={40} round={true} />
+                </InstapaperShareButton>
+              </div>
             </div>
           </Col>
           <Col md={6} xs={12}>

@@ -28,7 +28,7 @@ h4 {
 }
 
 .bg-pink {
-  background-color: #FAF2EA;
+  background-color: #faf2ea;
 }
 .bg-wh {
   background-color: rgb(250, 250, 250);
@@ -165,7 +165,7 @@ button[type="submit"] {
 }
 
 .grey {
-	color: #737373;
+  color: #737373;
 }
 
 .supporters {
@@ -230,4 +230,8 @@ video {
   .bolder {
     font-weight: 600;
   }
+}
+
+.share-buttons > * {
+  margin: 0.3rem;
 }

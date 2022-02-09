@@ -18,6 +18,9 @@ export const appData = {
   companyName: "Lorem ipSum",
   url: "clikplatform.nl",
   twitter: "@clik",
-  formUrl: "clikplatform.nl",
+  formUrl: "https://clikplatform.nl",
   serverUrl: process.env.SERVER_URL,
+  quote:
+    "Clik lets you benefit and contribute to your local community - Stay connected!",
+  hashtag: "#JoinClikPlatform",
 };
