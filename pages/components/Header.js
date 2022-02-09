@@ -34,9 +34,9 @@ const Header = () => {
           </Col>
           <Col md={6} xs={12}>
             <div data-aos="fade-left">
-                <div className="feed">
+                <div className="feed" style="margin-left: 25%">
                   {/* <video src={appData.Clik-Feeda}></video> */}
-                  <video width={300} muted autoPlay>
+                  <video width={300} muted autoPlay loop>
                     <source src="/Clik-Feed.mp4" type="video/mp4" />
                   </video>
                 </div>
