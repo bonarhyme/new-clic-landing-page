@@ -30,6 +30,11 @@ const Header = () => {
               <Form.Text className="text-muted">
                 Clik will soon be available, join wait list to stay informed
               </Form.Text>
+			  <strong className="grey">
+				<em>
+					Share Clik with family and friends, so they can join the wait list too!!
+				</em>
+              </strong>
             </div>
           </Col>
           <Col md={6} xs={12}>
