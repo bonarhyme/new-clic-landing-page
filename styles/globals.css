@@ -94,21 +94,6 @@ button[type="submit"] {
   }
 }
 
-/* .feed { */
-/* transform: rotateX(30deg); */
-/* transform-origin: 100%; */
-/* transform: rotateX(60deg) rotateZ(29deg) rotateY(0deg); */
-/* transform-style: preserve-3d; */
-/* transform-origin: 0 0 0;
-  perspective: 900px; */
-/* transform: rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);
-
-  transform-style: preserve-3d; */
-/* } */
-/* .feed-image { */
-/* clip: rect(0em, 18.5em, 23.1em, 0em); */
-/* } */
-
 .leaf {
   padding-top: 3rem;
 }
@@ -230,6 +215,24 @@ video {
   .bolder {
     font-weight: 600;
   }
+}
+
+.share-buttons h3 {
+  width: 100%;
+  text-align: center;
+}
+
+.share-buttons {
+  position: fixed;
+  bottom: 0;
+  right: 50%;
+
+  transform: translateX(50%);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: 999;
+  background-color: white;
 }
 
 .share-buttons > * {

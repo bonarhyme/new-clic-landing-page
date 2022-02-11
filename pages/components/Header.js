@@ -2,23 +2,6 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
 import { appData } from "../../variables/data";
-import {
-  FacebookShareButton,
-  InstapaperShareButton,
-  LinkedinShareButton,
-  TelegramShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from "react-share";
-
-import {
-  FacebookIcon,
-  InstapaperIcon,
-  LinkedinIcon,
-  TelegramIcon,
-  TwitterIcon,
-  WhatsappIcon,
-} from "react-share";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -55,32 +38,9 @@ const Header = () => {
                 </em>
               </strong>
               <br />
-              <div className="share-buttons">
-                <FacebookShareButton
-                  quote={appData.quote}
-                  hashtag={appData.hashtag}
-                  url={appData.url}
-                >
-                  <FacebookIcon size={40} round={true} />
-                </FacebookShareButton>
-                <TwitterShareButton
-                  url={appData.url}
-                  title={appData.quote}
-                  hashtags={[appData.hashtag]}
-                  related={["@bonarhyme"]}
-                >
-                  <TwitterIcon size={40} round={true} />
-                </TwitterShareButton>
-                <WhatsappShareButton title={appData.quote} url={appData.url}>
-                  <WhatsappIcon size={40} round={true} />
-                </WhatsappShareButton>
-                <InstapaperShareButton title={appData.quote} url={appData.url}>
-                  <InstapaperIcon size={40} round={true} />
-                </InstapaperShareButton>
-              </div>
             </div>
           </Col>
-          <Col md={6} xs={12}>
+          <Col md={(6, { order: "last" })} xs={(12, { order: "first" })}>
             <div data-aos="fade-left">
               <div className="feed" style={{ marginLeft: "25%" }}>
                 {/* <video src={appData.Clik-Feeda}></video> */}
