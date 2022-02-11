@@ -12,21 +12,6 @@ import LetsDo from "./components/LetsDo";
 import Supporters from "./components/Supporters";
 import Why from "./components/Why";
 
-import {
-  FacebookShareButton,
-  InstapaperShareButton,
-  LinkedinShareButton,
-  TelegramShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-  FacebookIcon,
-  InstapaperIcon,
-  LinkedinIcon,
-  TelegramIcon,
-  TwitterIcon,
-  WhatsappIcon,
-} from "react-share";
-
 export default function Home() {
   return (
     <SSRProvider>
@@ -67,30 +52,7 @@ export default function Home() {
           <div className="bg-pink">
             <Header />
           </div>
-          <div className="share-buttons">
-            <h3>Share Clik Platform!!</h3>
-            <FacebookShareButton
-              quote={appData.quote}
-              hashtag={appData.hashtag}
-              url={appData.url}
-            >
-              <FacebookIcon size={40} round={true} />
-            </FacebookShareButton>
-            <TwitterShareButton
-              url={appData.url}
-              title={appData.quote}
-              hashtags={[appData.hashtag]}
-              related={["@bonarhyme"]}
-            >
-              <TwitterIcon size={40} round={true} />
-            </TwitterShareButton>
-            <WhatsappShareButton title={appData.quote} url={appData.url}>
-              <WhatsappIcon size={40} round={true} />
-            </WhatsappShareButton>
-            <InstapaperShareButton title={appData.quote} url={appData.url}>
-              <InstapaperIcon size={40} round={true} />
-            </InstapaperShareButton>
-          </div>
+
           <Supporters />
           <Why />
           <GetInTouch />

@@ -222,7 +222,7 @@ video {
   text-align: center;
 }
 
-.share-buttons {
+/* .share-buttons {
   position: fixed;
   bottom: 0;
   right: 50%;
@@ -233,7 +233,7 @@ video {
   flex-wrap: wrap;
   z-index: 999;
   background-color: white;
-}
+} */
 
 .share-buttons > * {
   margin: 0.3rem;

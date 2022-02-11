@@ -7,6 +7,21 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import OurForm from "./OurForm";
 
+import {
+  FacebookShareButton,
+  InstapaperShareButton,
+  LinkedinShareButton,
+  TelegramShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+  FacebookIcon,
+  InstapaperIcon,
+  LinkedinIcon,
+  TelegramIcon,
+  TwitterIcon,
+  WhatsappIcon,
+} from "react-share";
+
 const Header = () => {
   useEffect(() => {
     AOS.init({ duration: 1500 });
@@ -26,18 +41,47 @@ const Header = () => {
                 Clik lets you benefit and contribute to your local community -
                 Stay connected!
               </p>
+
               <OurForm />
               <Form.Text className="text-muted">
                 Clik will soon be available, join wait list to stay informed
               </Form.Text>
               <br />
-              <strong className="grey">
-                <em>
-                  Share Clik with family and friends, so they can join the wait
-                  list too!!
-                </em>
-              </strong>
-              <br />
+              <div className="my-5">
+                <strong className="grey">
+                  <em>
+                    Share Clik with family and friends, so they can join the
+                    wait list too!!
+                  </em>
+                </strong>
+                <br />
+                <div className="share-buttons my-2">
+                  <FacebookShareButton
+                    quote={appData.quote}
+                    hashtag={appData.hashtag}
+                    url={appData.url}
+                  >
+                    <FacebookIcon size={40} round={true} />
+                  </FacebookShareButton>
+                  <TwitterShareButton
+                    url={appData.url}
+                    title={appData.quote}
+                    hashtags={[appData.hashtag]}
+                    related={["@bonarhyme"]}
+                  >
+                    <TwitterIcon size={40} round={true} />
+                  </TwitterShareButton>
+                  <WhatsappShareButton title={appData.quote} url={appData.url}>
+                    <WhatsappIcon size={40} round={true} />
+                  </WhatsappShareButton>
+                  <InstapaperShareButton
+                    title={appData.quote}
+                    url={appData.url}
+                  >
+                    <InstapaperIcon size={40} round={true} />
+                  </InstapaperShareButton>
+                </div>
+              </div>
             </div>
           </Col>
           <Col md={(6, { order: "last" })} xs={(12, { order: "first" })}>

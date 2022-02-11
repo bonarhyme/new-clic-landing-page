@@ -75,9 +75,9 @@ const GetInTouch = () => {
         <Col md={4}>
           <article className="my-card bg-pink" data-aos="fade-right">
             <HiLightBulb size={75} color="black" />
-            <address>support@clikplatform.nl</address>
+            <address className="my-3">support@clikplatform.nl</address>
 
-            <Button
+            {/* <Button
               className="text-white card-btn"
               variant="success"
               onClick={() => {
@@ -86,23 +86,23 @@ const GetInTouch = () => {
               }}
             >
               Get Support
-            </Button>
+            </Button> */}
           </article>
         </Col>
         <Col md={4}>
           <article className="my-card green big" data-aos="zoom-in">
             <BsFillPeopleFill size={75} color="white" />
-            <address className="white"> joinus@clikplatform.nl</address>
-            <span className="text-white card-a ">
+            <address className="white my-2"> joinus@clikplatform.nl</address>
+            {/* <span className="text-white card-a ">
               <Link href="#get-in-touch">Join The Team</Link>
-            </span>
+            </span> */}
           </article>
         </Col>
         <Col md={4}>
           <article className="my-card bg-pink" data-aos="fade-left">
             <HiLightBulb size={75} color="black" />
-            <address>contact@clikplatform.nl</address>
-            <Button
+            <address className="my-3">contact@clikplatform.nl</address>
+            {/* <Button
               variant="success"
               className="text-white card-btn"
               onClick={() => {
@@ -111,7 +111,7 @@ const GetInTouch = () => {
               }}
             >
               Ask a question
-            </Button>
+            </Button> */}
           </article>
         </Col>
         <Offcanvas show={show} onHide={handleClose}>
