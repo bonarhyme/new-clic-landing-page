@@ -47,7 +47,7 @@ const Header = () => {
                 Clik will soon be available, join wait list to stay informed
               </Form.Text>
               <br />
-              <div className="my-5">
+              <div style={{ marginTop: "15rem" }}>
                 <strong className="grey">
                   <em>
                     Share Clik with family and friends, so they can join the
